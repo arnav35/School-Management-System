@@ -1,0 +1,18 @@
+<html>
+<body>
+{% extends 'common/base.html' %}
+
+{% block content %}
+
+<form method="post" action="{% url 'marks' %}">
+	{% csrf_token %}
+	<label>Enter Subject Name: <input type="text" name="subject_name"><br>
+	<label>Enter Student Roll: <input type="text" name="student_roll"><br>
+	<label>Enter Class Name:<input type="text" name="class_name"><br>
+	<label>Enter Marks:<input type="text" name="marks"><br>
+	<label>Enter Exam Type:<input type="text" name="exam_type"><br>
+	<input type="submit" value="submit">
+</form>
+{% endblock %}
+</body>
+</html>

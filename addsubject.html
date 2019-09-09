@@ -1,0 +1,14 @@
+<html>
+<body>
+{% extends 'common/base.html' %}
+
+{% block content %}
+<form method="post" action="">
+	{% csrf_token %}
+	<label>Enter Subject Name:<input type="text" name="subject_name"><br>
+	<label>Enter Class Name:<input type="text" name="class_name"><br>
+	<input type="submit">
+</form>
+{% endblock %}
+</body>
+</html>

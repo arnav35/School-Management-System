@@ -1,0 +1,35 @@
+<html>
+<body>
+
+{% extends 'common/base.html' %}
+
+{% block content %}
+	
+<h1>Hello {{first}} {{last}} </h1>
+
+<h2>Class Teacher</h2><br>
+<small>Class: </small>{{class}}
+
+<h2>Teaching Subjects</h2><br>
+<small>Subjects:</small>
+{% for i in subject %}
+	{{i}}
+{% endfor %}
+<br>
+
+<small>Class:</small>
+{% for i in classes %}
+	{{i}}
+{% endfor %}
+
+<br>
+
+	<a href="{% url 'addsubject' %}">Add Subject</a>
+	<a href="{% url 'addmarks' %}">Add Marks</a>
+	<a href="{% url 'addattend' %}">Add Attendance</a>
+	<a href="{% url 'addexams' %}">Add Exams</a>
+
+{% endblock %}
+
+</body>
+</html>
